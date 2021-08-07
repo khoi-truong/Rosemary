@@ -79,12 +79,12 @@
 		FF116FF026B3AF3A0068F335 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FF116FF126B3AF3A0068F335 /* ViewController.swift */,
+				FF116FF926B3AF3A0068F335 /* Info.plist */,
 				FF116FF226B3AF3A0068F335 /* Assets.xcassets */,
 				FF116FF326B3AF3A0068F335 /* LaunchScreen.storyboard */,
 				FF116FF526B3AF3A0068F335 /* Main.storyboard */,
 				FF116FF826B3AF3A0068F335 /* AppDelegate.swift */,
-				FF116FF926B3AF3A0068F335 /* Info.plist */,
+				FF116FF126B3AF3A0068F335 /* ViewController.swift */,
 				FF116FFA26B3AF3A0068F335 /* SceneDelegate.swift */,
 			);
 			path = Sources;
@@ -94,8 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				FF116FF026B3AF3A0068F335 /* Sources */,
-				FF2D564D26B04D6600AC971E /* RosemaryTests */,
-				FF2D565826B04D6600AC971E /* RosemaryUITests */,
+				FF2D564D26B04D6600AC971E /* Tests */,
+				FF2D565826B04D6600AC971E /* UITests */,
 				FF2D563526B04D6400AC971E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,22 +110,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF2D564D26B04D6600AC971E /* RosemaryTests */ = {
+		FF2D564D26B04D6600AC971E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				FF2D564E26B04D6600AC971E /* RosemaryTests.swift */,
 				FF2D565026B04D6600AC971E /* Info.plist */,
 			);
-			path = RosemaryTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		FF2D565826B04D6600AC971E /* RosemaryUITests */ = {
+		FF2D565826B04D6600AC971E /* UITests */ = {
 			isa = PBXGroup;
 			children = (
 				FF2D565926B04D6600AC971E /* RosemaryUITests.swift */,
 				FF2D565B26B04D6600AC971E /* Info.plist */,
 			);
-			path = RosemaryUITests;
+			path = UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,7 +476,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
-				INFOPLIST_FILE = RosemaryTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +498,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
-				INFOPLIST_FILE = RosemaryTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +519,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
-				INFOPLIST_FILE = RosemaryUITests/Info.plist;
+				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,7 +539,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
-				INFOPLIST_FILE = RosemaryUITests/Info.plist;
+				INFOPLIST_FILE = UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
