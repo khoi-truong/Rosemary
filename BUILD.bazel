@@ -1,90 +1,14 @@
-load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application", "ios_unit_test")
-load("@build_bazel_rules_apple//apple/testing/default_runner:ios_test_runner.bzl", "ios_test_runner")
-load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
-load("//bazel/rules:substitutions.bzl", "substitutions")
-
-ROOT_MODULE_NAME = "Rosemary"
-
-swift_library(
-    name = ROOT_MODULE_NAME,
-    module_name = ROOT_MODULE_NAME,
-    srcs = glob([
-        "Sources/**/*.swift"
-    ]),
-    data = [
-    	"Assets",
-    	"Sources/Base.lproj/Main.storyboard",
-    	"Sources/Base.lproj/LaunchScreen.storyboard",
-    ],
-    deps = []
-)
-
-filegroup(
-    name = "Assets",
-    srcs = glob(["Sources/Assets.xcassets/**"]),
-    visibility = ["//visibility:public"],
-)
-
-substitutions(
-  name = "InfoPlist",
-  template = "Sources/Info.plist",
-  output = "Rosemary-Info.plist",
-  substitutions = {
-    "$(PRODUCT_MODULE_NAME)": ROOT_MODULE_NAME,
-  },
-)
-
-ios_application(
+alias(
     name = "RosemaryApp",
-    bundle_id = "com.khoitm.rosemary",
-    bundle_name = "Rosemary",
-    infoplists = ["InfoPlist"],
-    families = ["iphone"],
-    minimum_os_version = "13.0",
-    deps = [
-        ":%s" % ROOT_MODULE_NAME,
-    ]
+    actual = "//Sources:RosemaryApp",
 )
 
-MOCK_MODULE_NAME = "%sMocks" % ROOT_MODULE_NAME
-
-swift_library(
-    name = MOCK_MODULE_NAME,
-    srcs = glob([
-        "Mocks/**/*.swift"
-    ]),
-    visibility = ["//visibility:public"],
-    deps = [
-        ":%s" % ROOT_MODULE_NAME,
-    ]
+alias(
+    name = "RosemaryMocks",
+    actual = "//Mocks:RosemaryMocks",
 )
 
-TEST_MODULE_NAME = "%sTestsLib" % ROOT_MODULE_NAME
-
-swift_library(
-    name = TEST_MODULE_NAME,
-    srcs = glob([
-        "Tests/**/*.swift"
-    ]),
-    visibility = ["//visibility:public"],
-    deps = [
-        ":%s" % ROOT_MODULE_NAME,
-        ":%s" % MOCK_MODULE_NAME,
-    ]
-)
-
-ios_test_runner(
-    name = "ios_x86_64_sim_runner",
-    device_type = "iPhone 12",
-    os_version = "14.5",
-)
-
-ios_unit_test(
+alias(
     name = "RosemaryTests",
-    deps = [
-        ":%s" % TEST_MODULE_NAME,
-    ],
-    minimum_os_version = "13.0",
-    runner = "//:ios_x86_64_sim_runner",
-    visibility = ["//visibility:public"]
+    actual = "//Tests:RosemaryTests",
 )

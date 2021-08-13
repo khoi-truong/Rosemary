@@ -1,0 +1,58 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("//bazel/rules:substitutions.bzl", "substitutions")
+load(
+  "//bazel/configs:environments.bzl",
+  "ROOT_MODULE_NAME",
+  "APP_NAME",
+  "APP_BUNDLE_ID",
+  "APP_BUNDLE_NAME"
+)
+
+ASSETS_NAME = "Assets"
+
+swift_library(
+    name = ROOT_MODULE_NAME,
+    module_name = ROOT_MODULE_NAME,
+    srcs = glob([
+        "**/*.swift"
+    ]),
+    data = glob([
+      "**/*.storyboard"
+    ]) + [
+      ASSETS_NAME
+    ],
+    deps = [],
+    visibility = ["//visibility:public"]
+)
+
+filegroup(
+    name = ASSETS_NAME,
+    srcs = glob([
+      "Sources/Assets.xcassets/**"
+    ]),
+)
+
+INFO_PLIST = "InfoPlist"
+
+substitutions(
+  name = INFO_PLIST,
+  template = "Info.plist",
+  output = "Rosemary-Info.plist",
+  substitutions = {
+    "$(PRODUCT_MODULE_NAME)": ROOT_MODULE_NAME,
+  },
+)
+
+ios_application(
+    name = APP_NAME,
+    bundle_id = APP_BUNDLE_ID,
+    bundle_name = APP_BUNDLE_NAME,
+    infoplists = [INFO_PLIST],
+    families = ["iphone"],
+    minimum_os_version = "13.0",
+    deps = [
+        ":%s" % ROOT_MODULE_NAME,
+    ],
+    visibility = ["//visibility:public"],
+)

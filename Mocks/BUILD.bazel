@@ -1,0 +1,14 @@
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("//bazel/configs:environments.bzl", "ROOT_MODULE_NAME", "MOCK_MODULE_NAME")
+
+swift_library(
+    name = MOCK_MODULE_NAME,
+    module_name = MOCK_MODULE_NAME,
+    srcs = glob([
+        "**/*.swift",
+    ]),
+    deps = [
+        "//Sources:%s" % ROOT_MODULE_NAME,
+    ],
+    visibility = ["//visibility:public"],
+)
