@@ -7,10 +7,12 @@
 
 import XCTest
 @testable import Rosemary
+@testable import RosemaryMocks
 
-class FirstTests: XCTestCase {
+final class FirstTests: XCTestCase {
 
     func testExample() {
-        XCTAssertEqual(49, 49)
+        let mockCity = City.mock()
+        XCTAssertEqual(mockCity.id, 1)
     }
 }

@@ -13,8 +13,13 @@
 		FF116FFE26B3AF3A0068F335 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF116FF526B3AF3A0068F335 /* Main.storyboard */; };
 		FF11700026B3AF3A0068F335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF116FF826B3AF3A0068F335 /* AppDelegate.swift */; };
 		FF11700226B3AF3A0068F335 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF116FFA26B3AF3A0068F335 /* SceneDelegate.swift */; };
-		FF2D564F26B04D6600AC971E /* RosemaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D564E26B04D6600AC971E /* RosemaryTests.swift */; };
 		FF2D565A26B04D6600AC971E /* RosemaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2D565926B04D6600AC971E /* RosemaryUITests.swift */; };
+		FF77C94D26C671F2006B64BD /* FirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77C94B26C671F2006B64BD /* FirstTests.swift */; };
+		FF77C94E26C671F2006B64BD /* SecondTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77C94C26C671F2006B64BD /* SecondTests.swift */; };
+		FF77C95826C6720B006B64BD /* RosemaryMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = FF77C95626C6720B006B64BD /* RosemaryMocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF77C96026C6727C006B64BD /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77C95F26C6727C006B64BD /* City.swift */; };
+		FF77C96326C672B3006B64BD /* City+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77C96126C672AF006B64BD /* City+Mock.swift */; };
+		FF77C96426C672BC006B64BD /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77C95F26C6727C006B64BD /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +37,13 @@
 			remoteGlobalIDString = FF2D563326B04D6400AC971E;
 			remoteInfo = Rosemary;
 		};
+		FF77C96526C672E9006B64BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF2D562C26B04D6400AC971E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF77C95326C6720B006B64BD;
+			remoteInfo = RosemaryMocks;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +56,17 @@
 		FF116FFA26B3AF3A0068F335 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FF2D563426B04D6400AC971E /* Rosemary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rosemary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2D564A26B04D6600AC971E /* RosemaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosemaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF2D564E26B04D6600AC971E /* RosemaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosemaryTests.swift; sourceTree = "<group>"; };
 		FF2D565026B04D6600AC971E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF2D565526B04D6600AC971E /* RosemaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosemaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2D565926B04D6600AC971E /* RosemaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosemaryUITests.swift; sourceTree = "<group>"; };
 		FF2D565B26B04D6600AC971E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF77C94B26C671F2006B64BD /* FirstTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTests.swift; sourceTree = "<group>"; };
+		FF77C94C26C671F2006B64BD /* SecondTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTests.swift; sourceTree = "<group>"; };
+		FF77C95426C6720B006B64BD /* RosemaryMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosemaryMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF77C95626C6720B006B64BD /* RosemaryMocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RosemaryMocks.h; sourceTree = "<group>"; };
+		FF77C95726C6720B006B64BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF77C95F26C6727C006B64BD /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		FF77C96126C672AF006B64BD /* City+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+Mock.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +91,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF77C95126C6720B006B64BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FF116FF026B3AF3A0068F335 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FF77C95E26C6727C006B64BD /* Models */,
 				FF116FF926B3AF3A0068F335 /* Info.plist */,
 				FF116FF226B3AF3A0068F335 /* Assets.xcassets */,
 				FF116FF326B3AF3A0068F335 /* LaunchScreen.storyboard */,
@@ -96,6 +122,7 @@
 				FF116FF026B3AF3A0068F335 /* Sources */,
 				FF2D564D26B04D6600AC971E /* Tests */,
 				FF2D565826B04D6600AC971E /* UITests */,
+				FF77C95526C6720B006B64BD /* Mocks */,
 				FF2D563526B04D6400AC971E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,6 +133,7 @@
 				FF2D563426B04D6400AC971E /* Rosemary.app */,
 				FF2D564A26B04D6600AC971E /* RosemaryTests.xctest */,
 				FF2D565526B04D6600AC971E /* RosemaryUITests.xctest */,
+				FF77C95426C6720B006B64BD /* RosemaryMocks.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,7 +141,8 @@
 		FF2D564D26B04D6600AC971E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FF2D564E26B04D6600AC971E /* RosemaryTests.swift */,
+				FF77C94B26C671F2006B64BD /* FirstTests.swift */,
+				FF77C94C26C671F2006B64BD /* SecondTests.swift */,
 				FF2D565026B04D6600AC971E /* Info.plist */,
 			);
 			path = Tests;
@@ -128,7 +157,36 @@
 			path = UITests;
 			sourceTree = "<group>";
 		};
+		FF77C95526C6720B006B64BD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FF77C95626C6720B006B64BD /* RosemaryMocks.h */,
+				FF77C96126C672AF006B64BD /* City+Mock.swift */,
+				FF77C95726C6720B006B64BD /* Info.plist */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FF77C95E26C6727C006B64BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF77C95F26C6727C006B64BD /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FF77C94F26C6720B006B64BD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF77C95826C6720B006B64BD /* RosemaryMocks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FF2D563326B04D6400AC971E /* Rosemary */ = {
@@ -159,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FF77C96626C672E9006B64BD /* PBXTargetDependency */,
 				FF2D564C26B04D6600AC971E /* PBXTargetDependency */,
 			);
 			name = RosemaryTests;
@@ -184,6 +243,24 @@
 			productReference = FF2D565526B04D6600AC971E /* RosemaryUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FF77C95326C6720B006B64BD /* RosemaryMocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF77C95926C6720B006B64BD /* Build configuration list for PBXNativeTarget "RosemaryMocks" */;
+			buildPhases = (
+				FF77C94F26C6720B006B64BD /* Headers */,
+				FF77C95026C6720B006B64BD /* Sources */,
+				FF77C95126C6720B006B64BD /* Frameworks */,
+				FF77C95226C6720B006B64BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RosemaryMocks;
+			productName = RosemaryMocks;
+			productReference = FF77C95426C6720B006B64BD /* RosemaryMocks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,11 +275,15 @@
 					};
 					FF2D564926B04D6600AC971E = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = FF2D563326B04D6400AC971E;
 					};
 					FF2D565426B04D6600AC971E = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = FF2D563326B04D6400AC971E;
+					};
+					FF77C95326C6720B006B64BD = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
@@ -222,6 +303,7 @@
 				FF2D563326B04D6400AC971E /* Rosemary */,
 				FF2D564926B04D6600AC971E /* RosemaryTests */,
 				FF2D565426B04D6600AC971E /* RosemaryUITests */,
+				FF77C95326C6720B006B64BD /* RosemaryMocks */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +333,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF77C95226C6720B006B64BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,6 +349,7 @@
 			files = (
 				FF11700026B3AF3A0068F335 /* AppDelegate.swift in Sources */,
 				FF116FFB26B3AF3A0068F335 /* ViewController.swift in Sources */,
+				FF77C96026C6727C006B64BD /* City.swift in Sources */,
 				FF11700226B3AF3A0068F335 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +358,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF2D564F26B04D6600AC971E /* RosemaryTests.swift in Sources */,
+				FF77C94D26C671F2006B64BD /* FirstTests.swift in Sources */,
+				FF77C94E26C671F2006B64BD /* SecondTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +368,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2D565A26B04D6600AC971E /* RosemaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF77C95026C6720B006B64BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF77C96426C672BC006B64BD /* City.swift in Sources */,
+				FF77C96326C672B3006B64BD /* City+Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +392,11 @@
 			isa = PBXTargetDependency;
 			target = FF2D563326B04D6400AC971E /* Rosemary */;
 			targetProxy = FF2D565626B04D6600AC971E /* PBXContainerItemProxy */;
+		};
+		FF77C96626C672E9006B64BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF77C95326C6720B006B64BD /* RosemaryMocks */;
+			targetProxy = FF77C96526C672E9006B64BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -474,6 +579,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -485,6 +591,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.khoitm.RosemaryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rosemary.app/Rosemary";
@@ -496,6 +603,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GZ2S589H2;
 				INFOPLIST_FILE = Tests/Info.plist;
@@ -553,6 +661,60 @@
 			};
 			name = Release;
 		};
+		FF77C95A26C6720B006B64BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6GZ2S589H2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Mocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khoitm.RosemaryMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF77C95B26C6720B006B64BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6GZ2S589H2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Mocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khoitm.RosemaryMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,6 +750,15 @@
 			buildConfigurations = (
 				FF2D566526B04D6600AC971E /* Debug */,
 				FF2D566626B04D6600AC971E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF77C95926C6720B006B64BD /* Build configuration list for PBXNativeTarget "RosemaryMocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF77C95A26C6720B006B64BD /* Debug */,
+				FF77C95B26C6720B006B64BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

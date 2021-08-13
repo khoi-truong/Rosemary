@@ -46,6 +46,19 @@ ios_application(
     ]
 )
 
+MOCK_MODULE_NAME = "%sMocks" % ROOT_MODULE_NAME
+
+swift_library(
+    name = MOCK_MODULE_NAME,
+    srcs = glob([
+        "Mocks/**/*.swift"
+    ]),
+    visibility = ["//visibility:public"],
+    deps = [
+        ":%s" % ROOT_MODULE_NAME,
+    ]
+)
+
 TEST_MODULE_NAME = "%sTestsLib" % ROOT_MODULE_NAME
 
 swift_library(
@@ -56,6 +69,7 @@ swift_library(
     visibility = ["//visibility:public"],
     deps = [
         ":%s" % ROOT_MODULE_NAME,
+        ":%s" % MOCK_MODULE_NAME,
     ]
 )
 
