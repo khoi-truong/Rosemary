@@ -1,7 +1,7 @@
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
 load("@build_bazel_rules_apple//apple/testing/default_runner:ios_test_runner.bzl", "ios_test_runner")
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
-load("//bazel/configs:environments.bzl", "ROOT_MODULE_NAME", "MOCK_MODULE_NAME", "TEST_MODULE_NAME")
+load("@bazel//configs:environments.bzl", "ROOT_MODULE_NAME", "MOCK_MODULE_NAME", "TEST_MODULE_NAME")
 
 swift_library(
     name = TEST_MODULE_NAME,

@@ -33,3 +33,8 @@ load(
 )
 
 apple_support_dependencies()
+
+local_repository(
+    name = "bazel",
+    path = "bazel",
+)
